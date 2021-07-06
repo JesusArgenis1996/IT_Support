@@ -31,10 +31,10 @@
             <div class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none" aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
                 <div class="py-1">
                     @if(Auth::user()->job=='IT Support'||Auth::user()->job=='Maintenance')
-                        <a tabindex="1" class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"  role="menuitem" >PANEL</a>
+                        <a tabindex="1" class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"  role="menuitem" href="{{route('panel')}}" >PANEL</a>
                     @else
-                        <a tabindex="0" class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"  role="menuitem" >New Ticket</a>
-                        <a tabindex="1" class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"  role="menuitem" >Your Ticket</a>
+                        <a tabindex="0" class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"  role="menuitem" href="{{route('ticket')}}">New Ticket</a>
+                        <a tabindex="1" class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"  role="menuitem" href="{{route('show.ticket')}}">Your Ticket</a>
                     @endif
                 </div>
                 <div class="py-1">

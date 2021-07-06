@@ -15,3 +15,12 @@ Route::get('/ticket', App\Http\Livewire\TicketComponent::class)->middleware('aut
 
 //TUTORIAL
 Route::get('/tutorial', App\Http\Livewire\Tutorial::class)->name('tutorial');
+
+//PANEL
+Route::get('/panel', App\Http\Livewire\Panel\Home::class)->middleware('auth')->name('panel');
+
+Route::get('/panel/all', App\Http\Livewire\Panel\AllTicket::class)->middleware('auth')->name('show.all');
+Route::get('/panel/open', App\Http\Livewire\Panel\ShowTicket::class)->middleware('auth')->name('open.ticket');
+Route::get('/panel/users', App\Http\Livewire\Panel\ShowUser::class)->middleware('auth')->name('show.user');
+Route::get('/panel/work', App\Http\Livewire\Panel\YourTicket::class)->middleware('auth')->name('your.ticket');
+Route::get('/panel/ticket/{id}', App\Http\Livewire\Panel\SeeTicket::class)->middleware('auth')->name('see.ticket');

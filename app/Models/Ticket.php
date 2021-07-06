@@ -25,5 +25,13 @@ class Ticket extends Model
         'date'
     ];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class,'asign_to');
+    }
+    public function createBy()
+    {
+        return $this->belongsTo(User::class,'user_id');
+    }
     use HasFactory;
 }
